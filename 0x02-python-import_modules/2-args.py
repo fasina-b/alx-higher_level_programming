@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+import sys
 if __name__ == "__main__":
-    import sys
     argc = len(sys.argv) - 1
     opp = "argument" if argc == 1 else "arguments"
     char = ":" if argc else "."
