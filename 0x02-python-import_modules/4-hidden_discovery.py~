@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import imp
+hidden_4 = imp.load_source('hidden_4', 'hidden_4.pyc')
+chars = dir(hidden_4)
+chars.sort()
+for char in chars:
+    if not char.startswith("__"):
+        print(char)
