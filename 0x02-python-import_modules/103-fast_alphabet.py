@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import string; print(*list(string.ascii_uppercase), sep='')
+print(*list(map(chr, range(65, 91))), sep="")
