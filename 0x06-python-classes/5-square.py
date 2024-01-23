@@ -24,6 +24,7 @@ class Square:
         """
         self.size = size
 
+    @property
     def size(self):
         """
         Getter method to retrieve the size of the square.
@@ -33,6 +34,7 @@ class Square:
         """
         return self.__size
 
+    @size.setter
     def size(self, value):
         """
         Setter method to set the size of the square.
