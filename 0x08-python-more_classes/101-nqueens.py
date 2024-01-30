@@ -2,7 +2,7 @@
 
 """Solves the N-Queens Puzzle.
 
-Finds all possible solutions for placing N non-attacking queens on an NxN chessboard.
+Finds all possible solutions for placing N non-attacking queens on chessboard
 
 Example:
     $ ./101-nqueens.py N
@@ -14,7 +14,7 @@ Attributes:
     chessboard (list): A list of lists representing the chessboard.
     solutions (list): A list of lists containing solutions.
 
-Solutions are represented in the format [[row, column], [row, column], [row, column], [row, column]]
+Solutions are represented in the format [[row, column], [row, column], [row,
 where `row` and `column` represent the position of a queen on the chessboard.
 """
 import sys
