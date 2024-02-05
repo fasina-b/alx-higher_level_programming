@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+"""Square Module"""
+
+from 9-rectangle import Rectangle
+
+
+class Square(Rectangle):
+    """Square class, a special case of a rectangle with equal sides."""
+
+    def __init__(self, size):
+        """
+        Initializes a square with a given size.
+
+        Args:
+            size (int): The size of the square.
+
+        Raises:
+            ValueError: If size is not a positive integer.
+        """
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(size, size)
+
+    def area(self):
+        """
+        Calculates and returns the area of the square.
+
+        Returns:
+            int: The area of the square.
+        """
+        return self.__size ** 2
