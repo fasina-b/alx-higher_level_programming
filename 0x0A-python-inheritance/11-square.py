@@ -7,9 +7,9 @@ class Square(Rectangle):
     """Square class, inherits from BaseGeometry"""
     def __init__(self, size):
         """Initialize a square with the given size."""
-        super().__init__()
         self.integer_validator("size", size)
         self.__size = size
+        super().__init__(size, size)
 
     def area(self):
         """Return the area of the square."""
