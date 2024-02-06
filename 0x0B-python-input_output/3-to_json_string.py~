@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+""" 
+Utility module for JSON conversion
+"""
+
+import json
+
+def to_json_string(my_obj):
+    """ 
+    Convert object to JSON string representation.
+
+    Args:
+        my_obj: Any object
+
+    Returns:
+        str: JSON string representation of the object
+
+    """
+    return json.dumps(my_obj)
