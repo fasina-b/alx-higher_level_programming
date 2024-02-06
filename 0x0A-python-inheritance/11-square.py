@@ -10,7 +10,7 @@ class Square(Rectangle):
     Represents a Square, a special case of a Rectangle.
     """
 
-    def __init__(self, size: int):
+    def __init__(self, size):
         """
         Initializes a new square.
 
@@ -19,4 +19,4 @@ class Square(Rectangle):
         """
         self.integer_validator("size", size)
         super().__init__(size, size)
-        self.__size: int = size
+        self.__size = size
