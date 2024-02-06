@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" 
+"""
 A module containing a function to read text from a file.
 """
 
 
 def read_text_from_file(filename=""):
-    """ 
+    """
     Read text from a file and print its contents.
 
     Args:
@@ -13,7 +13,7 @@ def read_text_from_file(filename=""):
 
     Raises:
         FileNotFoundError: If the specified file cannot be found.
-        PermissionError: If the specified file cannot be opened due to permission issues.
+        PermissionError: specified file cannot be opened permission issues.
     """
     try:
         with open(filename, 'r', encoding="utf-8") as file:
