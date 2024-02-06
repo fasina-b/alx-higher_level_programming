@@ -4,7 +4,7 @@ A module containing a function to read text from a file.
 """
 
 
-def read_text_from_file(filename=""):
+def read_file(filename=""):
     """
     Read text from a file and print its contents.
 
