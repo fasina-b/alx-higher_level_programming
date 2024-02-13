@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module containing the Base class """
+"""Defines a base class."""
 import json
 import csv
 import turtle
@@ -25,8 +25,8 @@ class Base:
         if id is not None:
             self.id = id
         else:
-            BaseModel.__nb_objects += 1
-            self.id = BaseModel.__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -45,13 +45,13 @@ class Base:
         """Write JSON serialization of objects to a file.
 
         Args:
-            list_objs (list): A list of BaseModel instances.
+            list_objs (list): A list of Base instances.
         """
         filename = f"{cls.__name__}.json"
         with open(filename, "w") as file:
             if list_objs:
                 json_data = [obj.to_dictionary() for obj in list_objs]
-                file.write(BaseModel.to_json_string(json_data))
+                file.write(Base.to_json_string(json_data))
             else:
                 file.write("[]")
 
@@ -75,7 +75,7 @@ class Base:
             **dictionary (dict): Key/value pairs of attributes.
 
         Returns:
-            BaseModel: An instance of BaseModel with attributes set.
+            Base: An instance of Base with attributes set.
         """
         instance = cls.__new__(cls)
         if cls.__name__ == "Rectangle":
@@ -95,7 +95,7 @@ class Base:
         filename = f"{cls.__name__}.json"
         try:
             with open(filename, "r") as file:
-                json_data = BaseModel.from_json_string(file.read())
+                json_data = Base.from_json_string(file.read())
                 return [cls.create(**data) for data in json_data]
         except FileNotFoundError:
             return []
@@ -105,7 +105,7 @@ class Base:
         """Write CSV serialization of objects to a file.
 
         Args:
-            list_objs (list): A list of BaseModel instances.
+            list_objs (list): A list of Base instances.
         """
         filename = f"{cls.__name__}.csv"
         with open(filename, "w", newline="") as csvfile:
