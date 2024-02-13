@@ -142,8 +142,8 @@ class Base:
         turt.pensize(3)
         turt.shape("turtle")
 
-        for obj_list, color in
-        [(list_rectangles, "#ffffff"), (list_squares, "#b5e3d8")]:
+        for obj_list, color in [(list_rectangles, "#ffffff"),
+                                (list_squares, "#b5e3d8")]:
             turt.color(color)
             for obj in obj_list:
                 turt.showturtle()
