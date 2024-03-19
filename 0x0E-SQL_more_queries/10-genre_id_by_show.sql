@@ -1,5 +1,3 @@
-10.
-
 -- List all shows with at least one linked genre
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
